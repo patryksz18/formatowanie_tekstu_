@@ -20,5 +20,40 @@ namespace formatowanie_tekstu_
         {
             InitializeComponent();
         }
+        private void ApplyFormatting(object sender, RoutedEventArgs e)
+        {
+            // Uzyskanie bieżącego tekstu z RichTextBox
+            TextRange textRange = new TextRange(TextBoxInput.Document.ContentStart, TextBoxInput.Document.ContentEnd);
+
+            // Pogrubienie
+            if (BoldCheckBox.IsChecked == true)
+            {
+                textRange.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Bold);
+            }
+            else
+            {
+                textRange.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Normal);
+            }
+
+            // Kursywa
+            if (ItalicCheckBox.IsChecked == true)
+            {
+                textRange.ApplyPropertyValue(TextElement.FontStyleProperty, FontStyles.Italic);
+            }
+            else
+            {
+                textRange.ApplyPropertyValue(TextElement.FontStyleProperty, FontStyles.Normal);
+            }
+
+            // Podkreślenie
+            if (UnderlineCheckBox.IsChecked == true)
+            {
+                textRange.ApplyPropertyValue(Inline.TextDecorationsProperty, TextDecorations.Underline);
+            }
+            else
+            {
+                textRange.ApplyPropertyValue(Inline.TextDecorationsProperty, null);
+            }
+        }
     }
 }

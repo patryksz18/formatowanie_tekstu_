@@ -14,5 +14,19 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
+        <!--Kontrolki wyboru fontu i koloru -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left">
+            <CheckBox x:Name="BoldCheckBox" Content="Bold" Margin="10"/>
+            <CheckBox x:Name="ItalicCheckBox" Content="Italic" Margin="10"/>
+            <CheckBox x:Name="UnderlineCheckBox" Content="Underline" Margin="10"/>
+
+            <RadioButton x:Name="CzerwonyRadioButton" Content="Czerwony" GroupName="Color" Margin="10"/>
+            <RadioButton x:Name="NiebieskiRadioButton" Content="Niebieski" GroupName="Color" Margin="10"/>
+            <RadioButton x:Name="ZielonyRadioButton" Content="Zielony" GroupName="Color" Margin="10"/>
+
+            <RadioButton x:Name="ArialRadioButton" Content="Arial" GroupName="Font" Margin="10"/>
+            <RadioButton x:Name="TimesRadioButton" Content="Times New Roman" GroupName="Font" Margin="10"/>
+        </StackPanel>
+
     </Grid>
 </Window>

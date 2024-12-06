@@ -62,6 +62,7 @@ namespace formatowanie_tekstu_
                 color = "blue";
             else if (ZielonyRadioButton.IsChecked == true)
                 color = "green";
+            TextBoxInput.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString(color));
         }
     }
 }

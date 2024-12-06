@@ -39,5 +39,13 @@
             </RichTextBox.Background>
         </RichTextBox>
 
+        <!-- Kontrolki do rozmiaru czcionki i paska postepu oraz przycisk do potwierdzania zmian-->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left">
+            <Slider x:Name="FontSizeSlider" Minimum="8" Maximum="48" Value="12" Width="200" Margin="10" />
+            <TextBlock x:Name="FontSizeLabel" Text="Font Size" VerticalAlignment="Center" Margin="10"/>
+            <ProgressBar x:Name="ProgressBar" Width="200" Height="20" Margin="10" Minimum="0" Maximum="100" Value="0"/>
+            <Button Content="Potwierdz zmiany" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Click="ApplyFormatting"/>
+        </StackPanel>
+
     </Grid>
 </Window>

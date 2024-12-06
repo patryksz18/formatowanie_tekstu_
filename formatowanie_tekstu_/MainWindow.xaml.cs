@@ -63,6 +63,13 @@ namespace formatowanie_tekstu_
             else if (ZielonyRadioButton.IsChecked == true)
                 color = "green";
             TextBoxInput.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString(color));
+            // Krój czcionki
+            if (ArialRadioButton.IsChecked == true)
+                TextBoxInput.FontFamily = new FontFamily("Arial");
+            else if (TimesRadioButton.IsChecked == true)
+                TextBoxInput.FontFamily = new FontFamily("Times New Roman");
+            else if (CourierRadioButton.IsChecked == true)
+                TextBoxInput.FontFamily = new FontFamily("Courier New");
         }
     }
 }

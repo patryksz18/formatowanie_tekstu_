@@ -54,6 +54,14 @@ namespace formatowanie_tekstu_
             {
                 textRange.ApplyPropertyValue(Inline.TextDecorationsProperty, null);
             }
+            // Kolor czcionki
+            string color = "black"; // domyślny kolor
+            if (CzerwonyRadioButton.IsChecked == true)
+                color = "red";
+            else if (NiebieskiRadioButton.IsChecked == true)
+                color = "blue";
+            else if (ZielonyRadioButton.IsChecked == true)
+                color = "green";
         }
     }
 }

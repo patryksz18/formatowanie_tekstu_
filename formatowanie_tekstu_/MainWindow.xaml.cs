@@ -70,6 +70,10 @@ namespace formatowanie_tekstu_
                 TextBoxInput.FontFamily = new FontFamily("Times New Roman");
             else if (CourierRadioButton.IsChecked == true)
                 TextBoxInput.FontFamily = new FontFamily("Courier New");
+            // Rozmiar czcionki
+            TextBoxInput.FontSize = FontSizeSlider.Value;
+
+
         }
     }
 }

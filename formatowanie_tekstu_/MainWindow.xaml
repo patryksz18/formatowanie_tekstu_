@@ -28,5 +28,16 @@
             <RadioButton x:Name="TimesRadioButton" Content="Times New Roman" GroupName="Font" Margin="10"/>
         </StackPanel>
 
+        <!-- RichTextBox do edycji tekstu -->
+        <RichTextBox x:Name="TextBoxInput" Grid.Row="1" Margin="10" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" 
+                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <RichTextBox.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="LightGray" Offset="0"/>
+                    <GradientStop Color="LightSalmon" Offset="1"/>
+                </LinearGradientBrush>
+            </RichTextBox.Background>
+        </RichTextBox>
+
     </Grid>
 </Window>

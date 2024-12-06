@@ -72,8 +72,25 @@ namespace formatowanie_tekstu_
                 TextBoxInput.FontFamily = new FontFamily("Courier New");
             // Rozmiar czcionki
             TextBoxInput.FontSize = FontSizeSlider.Value;
+            // Zaktualizowanie paska postępu
+            UpdateProgress();
 
 
+        }
+        private void UpdateProgress()
+        {
+            double progress = 0;
+
+            if (BoldCheckBox.IsChecked == true) progress += 10;
+            if (ItalicCheckBox.IsChecked == true) progress += 10;
+            if (UnderlineCheckBox.IsChecked == true) progress += 10;
+
+            if (CzerwonyRadioButton.IsChecked == true || NiebieskiRadioButton.IsChecked == true || ZielonyRadioButton.IsChecked == true) progress += 20;
+            if (ArialRadioButton.IsChecked == true || TimesRadioButton.IsChecked == true || CourierRadioButton.IsChecked == true) progress += 20;
+
+            progress += FontSizeSlider.Value / FontSizeSlider.Maximum * 20;  
+
+            ProgressBar.Value = progress;
         }
     }
 }
